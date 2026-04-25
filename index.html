@@ -94,10 +94,57 @@
       margin: 0 4px;
     }
 
+    /* EXTERNAL LINK BUTTON - GBA Extended */
+    .external-link-card {
+      background: linear-gradient(115deg, rgba(25, 34, 55, 0.9), rgba(18, 24, 42, 0.95));
+      border-radius: 24px;
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(255, 204, 102, 0.3);
+      transition: all 0.3s ease;
+      text-align: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .external-link-card:hover {
+      transform: translateY(-3px);
+      border-color: #ffcc66;
+      background: linear-gradient(115deg, #1e2a44, #141c30);
+      box-shadow: 0 14px 28px -8px rgba(0,0,0,0.5);
+    }
+    .external-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #ffcc66, #ffaa33);
+      color: #1a1f2e;
+      padding: 10px 24px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1rem;
+      transition: all 0.2s;
+      box-shadow: 0 4px 12px rgba(255, 204, 102, 0.3);
+    }
+    .external-link:hover {
+      transform: scale(1.02);
+      background: linear-gradient(135deg, #ffdd88, #ffbb44);
+      box-shadow: 0 6px 18px rgba(255, 204, 102, 0.5);
+    }
+    .external-link span {
+      font-size: 1.3rem;
+    }
+    .link-description {
+      color: #93a5cf;
+      margin-top: 8px;
+      font-size: 0.75rem;
+    }
+
     /* game grid — modern button cards */
     .games-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 1.2rem;
       max-width: 1400px;
       margin: 0 auto;
@@ -142,7 +189,7 @@
     .game-icon {
       font-size: 2rem;
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-      min-width: 48px;
+      min-width: 52px;
       text-align: center;
     }
     .game-info {
@@ -150,7 +197,7 @@
     }
     .game-title {
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: #f5e6c4;
       letter-spacing: -0.2px;
       display: flex;
@@ -176,7 +223,7 @@
     }
     .arrow-hint {
       opacity: 0.5;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       transition: 0.2s;
     }
     .game-btn:hover .arrow-hint {
@@ -244,10 +291,14 @@
         grid-template-columns: 1fr;
       }
       .game-title {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
       }
       .search-box #searchInput {
         width: 160px;
+      }
+      .external-link {
+        padding: 8px 18px;
+        font-size: 0.85rem;
       }
     }
   </style>
@@ -257,6 +308,17 @@
 <div class="header">
   <h1>🎮 GBA GAME VAULT</h1>
   <p>classic Game Boy Advance collection • click to launch</p>
+</div>
+
+<!-- Link to GBA Extended (complete game vault) -->
+<div class="external-link-card">
+  <a href="https://chipikipal800.github.io/GBA/" class="external-link" target="_blank">
+    <span>🎮</span> EXPLORE FULL GBA EXTENDED VAULT
+    <span>✨</span>
+  </a>
+  <div class="link-description">
+    📚 120+ additional GBA games • Enhanced visuals • Instant launch
+  </div>
 </div>
 
 <div class="toolbar">
@@ -285,7 +347,7 @@
 </div>
 
 <script>
-  // ========== GAME DATABASE (exactly from your list + inferred category & emoji) ==========
+  // ========== COMPLETE GAME DATABASE (ALL ORIGINAL GAMES PRESERVED) ==========
   const gamesData = [
     { name: "DONKEY KONG COUNTRY!!!!", link: "./launcher.html#advancewars2", category: "platform", emoji: "🦍" },
     { name: "Centipede, Breakout, Warlords", link: "./launcher.html#aladdin", category: "puzzle", emoji: "🎯" },
